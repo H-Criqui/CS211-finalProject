@@ -1,5 +1,5 @@
-#Final Project
-##Text based adventure
+# Final Project
+## Text based adventure
 
 I was thinking of doing a text based adventure in C++. This would include a decision tree in the form of dialogue options,
 sorting and potentially unordered maps for inventory purposes(I haven't fully thought out how I would implement this), and if
