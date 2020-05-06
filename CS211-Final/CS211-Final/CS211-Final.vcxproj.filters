@@ -29,5 +29,11 @@
     <ClInclude Include="Options.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Use.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

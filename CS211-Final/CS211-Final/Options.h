@@ -5,7 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <map>
-#include "Fights.h"
+#include "Character.h"
+
 
 using namespace std;
 
@@ -14,11 +15,10 @@ map<string, int> optionToInt
 	make_pair("use", 1),
 	make_pair("attack", 2),
 	make_pair("run", 3),
-	make_pair("inventory", 4),
-	make_pair("go", 5)
+	make_pair("inventory", 4)
 };
 
-void FightOption(string option, character& player, Enemy& enemy, bool &ranaway)
+void FightOption(string option, character* player, Enemy* enemy, bool &ranaway)
 {
 	bool finished = false;
 	while (finished == false)
@@ -30,8 +30,8 @@ void FightOption(string option, character& player, Enemy& enemy, bool &ranaway)
 			finished = true;
 			break;
 		case 2:
-			enemy.health == enemy.health - player.weapon;
-			player.health == player.health - enemy.attack;
+			enemy->health == enemy->health - player->weapon;
+			player->health == player->health - enemy->attack;
 			finished = true;
 			break;
 		case 3:
@@ -45,6 +45,9 @@ void FightOption(string option, character& player, Enemy& enemy, bool &ranaway)
 				cout << "You could not outrun your opponent, prepare to continue fighting." << endl;
 			}
 			finished = true;
+			break;
+		case 4:
+			inventory(player);
 			break;
 		}
 

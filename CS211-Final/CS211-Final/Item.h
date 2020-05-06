@@ -9,4 +9,5 @@ public:
 	string description;
 	string use_text;
 	int number;
+	string name;
 };
