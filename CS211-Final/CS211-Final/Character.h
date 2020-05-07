@@ -16,10 +16,11 @@ public:
 
 class character {
 public:
-	int health;
+	int health = 25;
 	vector<item> inventory;
-	int weapon;
-	int shield;
+	int weapon = 2;
+	int shield = 0;
+	int maxHealth = 25;
 
 
 };
@@ -32,3 +33,4 @@ void inventory(character *player)
 		cout << player->inventory[i].name << endl;
 	}
 }
+
