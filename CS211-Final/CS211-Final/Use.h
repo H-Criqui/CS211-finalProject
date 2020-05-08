@@ -9,7 +9,8 @@ using namespace std;
 map<string, void(*)(character* player)> items
 {
 	make_pair("bandage", bandages),
-	make_pair("shield", shields)
+	make_pair("shield", shields),
+	make_pair("sword", swords)
 };
 
 void use(character* player, string item)
@@ -28,6 +29,14 @@ void bandage(character* player)
 	if (player->health > player->maxHealth)
 	{
 		player->health = player->maxHealth;
+	}
+	player->inven["bandage"] += -1;
+	if (player->inven["bandage"] < 1)
+	{
+		player->inven.erase("bandage");
+		vector<item*>::iterator it = find(player->inventory.begin(), player->inventory.end(), bandage);
+		int index = distance(player->inventory.begin(), it);
+		player->inventory[index] = nullptr;
 	}
 }
 

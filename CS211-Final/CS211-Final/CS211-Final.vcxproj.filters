@@ -35,5 +35,11 @@
     <ClInclude Include="Use.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="TreeNodes.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Encounters.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

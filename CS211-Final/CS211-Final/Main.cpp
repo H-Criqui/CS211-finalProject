@@ -6,7 +6,6 @@ using namespace std;
 bool GameOver = false;
 
 
-
 int main()
 {
 	while (GameOver == false)

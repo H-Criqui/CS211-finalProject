@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include "Item.h"
 
 using namespace std;
@@ -17,11 +18,11 @@ public:
 class character {
 public:
 	int health = 25;
-	vector<item> inventory;
+	vector<item*> inventory;
 	int weapon = 2;
 	int shield = 0;
 	int maxHealth = 25;
-
+	map<string, int> inven;
 
 };
 
@@ -30,7 +31,10 @@ void inventory(character *player)
 	int i = 0;
 	while (i < player->inventory.size())
 	{
-		cout << player->inventory[i].name << endl;
+		if (player->inventory[i] != nullptr)
+		{
+			cout << player->inventory[i]->name << endl;
+		}
 	}
 }
 
