@@ -20,26 +20,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Fights.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Options.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Use.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TreeNodes.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Encounters.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Fights.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Use.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="encounters.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

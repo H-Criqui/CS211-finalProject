@@ -19,7 +19,7 @@ class character {
 public:
 	int health = 25;
 	vector<item*> inventory;
-	int weapon = 2;
+	int weapon = 4;
 	int shield = 0;
 	int maxHealth = 25;
 	map<string, int> inven;
@@ -34,7 +34,9 @@ void inventory(character *player)
 		if (player->inventory[i] != nullptr)
 		{
 			cout << player->inventory[i]->name << endl;
+		
 		}
+		i++;
 	}
 }
 

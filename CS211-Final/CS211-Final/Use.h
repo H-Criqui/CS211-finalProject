@@ -6,22 +6,6 @@
 
 using namespace std;
 
-map<string, void(*)(character* player)> items
-{
-	make_pair("bandage", bandages),
-	make_pair("shield", shields),
-	make_pair("sword", swords)
-};
-
-void use(character* player, string item)
-{
-	items[item](player);
-}
-
-void (*bandages)(character*) = bandage;
-void (*shields)(character*) = shield;
-void (*swords)(character*) = sword;
-
 
 void bandage(character* player)
 {
@@ -34,9 +18,12 @@ void bandage(character* player)
 	if (player->inven["bandage"] < 1)
 	{
 		player->inven.erase("bandage");
-		vector<item*>::iterator it = find(player->inventory.begin(), player->inventory.end(), bandage);
+		/*vector<item*>::iterator it = find(player->inventory.begin(), player->inventory.end(), bandage);
 		int index = distance(player->inventory.begin(), it);
-		player->inventory[index] = nullptr;
+		player->inventory[index] = nullptr;*/
+
+
+
 	}
 }
 
@@ -48,4 +35,28 @@ void shield(character* player)
 void sword(character* player)
 {
 	player->weapon += 5;
+}
+
+void (*bandages)(character*) = bandage;
+void (*shields)(character*) = shield;
+void (*swords)(character*) = sword;
+
+map<string, void(*)(character* player)> items
+{
+	make_pair("bandage", bandages),
+	make_pair("shield", shields),
+	make_pair("sword", swords)
+};
+
+void use(character* player, string item)
+{
+	if (player->inven[item] > 0)
+	{
+		items[item](player);
+	}
+	else
+	{
+		cout << "You reach for your " + item + ", but it is not there." << endl;
+		cout << "You either don't have this item or you have run out." << endl;
+	}
 }

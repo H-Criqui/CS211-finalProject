@@ -41,11 +41,7 @@ treeNode* Constructor(vector<string> file, int i, treeNode* x)
 {
 	if (i < file.size())
 	{
-		if (file[i] == "")
-		{
-			return x;
-		}
-		else if (i % 3 == 1)
+		if (i % 3 == 1)
 		{
 			treeNode* temp = new treeNode;
 			temp->text = file[i];
@@ -100,10 +96,11 @@ map<string, string> mobs
 	make_pair("kobolds" , "leads to a dark cave, who knows what could be inside?")
 };
 
-void run(treeNode* x, character* player)
+void run(treeNode* x, character* player, bool* gameover)
 {
-	if (x != nullptr)
+	if (x->right != nullptr && x->left != nullptr && x->center != nullptr && gameover)
 	{
+
 
 
 		string answer;
@@ -113,21 +110,24 @@ void run(treeNode* x, character* player)
 		cout << "(3) " << mobs[x->right->text] << endl;
 		cout << "Type in 1, 2, or 3 to continue." << endl;
 
-		getline(cin, answer);
+		
 		bool retry = true;
 		while (retry)
 		{
+			getline(cin, answer);
 			retry = false;
 			switch (ints[answer])
 			{
 			case 1:
-				run(x->left, player);
+
+				encounter["goblins"](player, gameover);
+				run(x->left, player, gameover);
 				break;
 			case 2:
-				run(x->center, player);
+				run(x->center, player, gameover);
 				break;
 			case 3:
-				run(x->right, player);
+				run(x->right, player, gameover);
 				break;
 			default:
 				cout << "That is not a valid answer, please type 1, 2, or 3 to continue." << endl;
@@ -135,5 +135,4 @@ void run(treeNode* x, character* player)
 			}
 		}
 	}
-	cout << "Game over, You Win!!" << endl;
 }

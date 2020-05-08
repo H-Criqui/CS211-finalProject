@@ -20,14 +20,17 @@ map<string, int> optionToInt
 	make_pair("inventory", 4)
 };
 
-void FightOption(string option, character* player, Enemy* enemy, bool &ranaway)
+void FightOption(character* player, Enemy* enemy, bool &ranaway)
 {
 	bool finished = false;
 	string temp;
-	istringstream ss{ option };
-	getline(ss, temp, ' ');
+	
 	while (finished == false)
 	{
+		string option;
+		getline(cin, option);
+		istringstream ss{ option };
+		getline(ss, temp, ' ');
 		string item;
 		switch (optionToInt[temp])
 		{
@@ -37,7 +40,7 @@ void FightOption(string option, character* player, Enemy* enemy, bool &ranaway)
 			finished = true;
 			break;
 		case 2:
-			enemy->health == enemy->health - player->weapon;
+			enemy->health = enemy->health - player->weapon;
 			finished = true;
 			break;
 		case 3:
@@ -58,10 +61,12 @@ void FightOption(string option, character* player, Enemy* enemy, bool &ranaway)
 		}
 
 	}
-	player->health == player->health - enemy->attack;
-	cout << "Your enemy attacks! You take " + enemy->attack;
-	cout  << " damage!" << endl;
-	cout << "Your health is now: " + player->health << endl;
-	cout << "Your enemy's health is now: " + enemy->health << endl;
-
+	if (!ranaway)
+	{
+		player->health += -(enemy->attack);
+		cout << "Your enemy attacks! You take " + to_string(enemy->attack);
+		cout << " damage!" << endl;
+		cout << "Your health is now: " + to_string(player->health) << endl;
+		cout << "Your enemy's health is now: " + to_string(enemy->health) << endl;
+	}
 }

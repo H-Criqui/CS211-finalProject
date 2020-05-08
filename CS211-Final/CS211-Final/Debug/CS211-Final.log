@@ -1,0 +1,5 @@
+﻿  Main.cpp
+C:\Users\nopassword\Desktop\CS211-finalProject\CS211-Final\CS211-Final\Character.h(32,11): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\nopassword\Desktop\CS211-finalProject\CS211-Final\CS211-Final\TreeNodes.h(23,20): warning C4018:  '>': signed/unsigned mismatch
+C:\Users\nopassword\Desktop\CS211-finalProject\CS211-Final\CS211-Final\TreeNodes.h(42,8): warning C4018:  '<': signed/unsigned mismatch
+  CS211-Final.vcxproj -> C:\Users\nopassword\Desktop\CS211-finalProject\CS211-Final\Debug\CS211-Final.exe
