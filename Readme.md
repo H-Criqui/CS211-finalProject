@@ -1,6 +1,12 @@
 # Final Project
 ## Text based adventure
 
+As a heads up- I kept running into a problem with the program not wanting to run on the first try and then running again, 
+with no changes to the code. It was also giving me a wierd error code that I can't remember located in a file I didn't make.
+I suspect it has something to do with Visual studio or my computer. Just in case though,
+it usually works on the second try of running the program. 
+
+
 This is my Text based adventure game
 
 Available commands
