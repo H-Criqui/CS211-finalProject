@@ -92,8 +92,8 @@ map<string, int> ints
 map<string, string> mobs
 {
 	make_pair("goblins" , "leads to a group of goblins, they seem like a reasonable fight."),
-	make_pair("Dragon"  , "leads to a dragon's lair. Only those with a death wish would enter here."),
-	make_pair("kobolds" , "leads to a dark cave, who knows what could be inside?")
+	make_pair("arena"  , "leads to a large coloseum. You can hear the roar of the crowd from here."),
+	make_pair("assassin" , "leads to a peaceful looking forrest.")
 };
 
 void run(treeNode* x, character* player, bool* gameover)
@@ -119,14 +119,15 @@ void run(treeNode* x, character* player, bool* gameover)
 			switch (ints[answer])
 			{
 			case 1:
-
-				encounter["goblins"](player, gameover);
+				encounter[x->left->text](player, gameover);
 				run(x->left, player, gameover);
 				break;
 			case 2:
+				encounter[x->center->text](player, gameover);
 				run(x->center, player, gameover);
 				break;
 			case 3:
+				encounter[x->right->text](player, gameover);
 				run(x->right, player, gameover);
 				break;
 			default:

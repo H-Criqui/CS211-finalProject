@@ -21,20 +21,22 @@ void bandage(character* player)
 		/*vector<item*>::iterator it = find(player->inventory.begin(), player->inventory.end(), bandage);
 		int index = distance(player->inventory.begin(), it);
 		player->inventory[index] = nullptr;*/
-
-
-
 	}
 }
 
 void shield(character* player)
 {
-	player->shield += 2;
+	player->shield += 1;
 }
 
 void sword(character* player)
 {
-	player->weapon += 5;
+	player->weapon += 1;
+	player->inven["sword"] += -1;
+	if (player->inven["sword"] <= 0)
+	{
+		player->inven.erase("sword");
+	}
 }
 
 void (*bandages)(character*) = bandage;

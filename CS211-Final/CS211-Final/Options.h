@@ -40,7 +40,9 @@ void FightOption(character* player, Enemy* enemy, bool &ranaway)
 			finished = true;
 			break;
 		case 2:
-			enemy->health = enemy->health - player->weapon;
+			cout << "You attack! ";
+			cout << "You deal " + to_string(player->weapon - enemy->defense) + " damage!" << endl;
+			enemy->health = enemy->health - (player->weapon - enemy->defense);
 			finished = true;
 			break;
 		case 3:
@@ -63,10 +65,13 @@ void FightOption(character* player, Enemy* enemy, bool &ranaway)
 	}
 	if (!ranaway)
 	{
-		player->health += -(enemy->attack);
-		cout << "Your enemy attacks! You take " + to_string(enemy->attack);
-		cout << " damage!" << endl;
-		cout << "Your health is now: " + to_string(player->health) << endl;
-		cout << "Your enemy's health is now: " + to_string(enemy->health) << endl;
+		if (enemy->health > 0)
+		{
+			player->health += -(enemy->attack - player->shield);
+			cout << "Your enemy attacks! You take " + to_string(enemy->attack - player->shield);
+			cout << " damage!" << endl;
+			cout << "Your health is now: " + to_string(player->health) << endl;
+			cout << "Your enemy's health is now: " + to_string(enemy->health) << endl;
+		}
 	}
 }
