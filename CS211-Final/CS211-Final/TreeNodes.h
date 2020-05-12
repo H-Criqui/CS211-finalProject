@@ -98,7 +98,7 @@ map<string, string> mobs
 
 void run(treeNode* x, character* player, bool* gameover)
 {
-	if (x->right != nullptr && x->left != nullptr && x->center != nullptr && gameover)
+	if (x->right != nullptr and x->left != nullptr and x->center != nullptr and (player->health > 0))
 	{
 
 
@@ -110,7 +110,7 @@ void run(treeNode* x, character* player, bool* gameover)
 		cout << "(3) " << mobs[x->right->text] << endl;
 		cout << "Type in 1, 2, or 3 to continue." << endl;
 
-		
+
 		bool retry = true;
 		while (retry)
 		{

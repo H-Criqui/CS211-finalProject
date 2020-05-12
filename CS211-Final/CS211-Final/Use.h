@@ -27,6 +27,11 @@ void bandage(character* player)
 void shield(character* player)
 {
 	player->shield += 1;
+	player->inven["shield"] += -1;
+	if (player->inven["shield"] <= 0)
+	{
+		player->inven.erase("shield");
+	}
 }
 
 void sword(character* player)

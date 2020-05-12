@@ -34,7 +34,8 @@ int main()
 	treeNode* start = new treeNode;
 	Constructor(file, 0, start);
 	character* player = new character;
-	while (*GameOver == false)
+	*GameOver = true;
+	while (*GameOver == true)
 	{
 		run(start->right, player, GameOver);
 	}

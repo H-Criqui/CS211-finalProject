@@ -15,7 +15,7 @@ void goblins(character* player, bool* gameover)
 	goblinTribe->defense = 0;
 	goblinTribe->name = "goblins";
 	Fight(player, goblinTribe, gameover);
-	if (gameover)
+	if (player->health > 0)
 	{
 		cout << "Congradulations for defeating the goblins! 1x bandage added to inventory." << endl;
 		if (player->inven["bandage"] == NULL)
@@ -45,7 +45,7 @@ void Arena(character* player, bool* gameover)
 	Goliath->defense = 1;
 	Goliath->name = "Go and Gob";
 	Fight(player, Goliath, gameover);
-	if (gameover)
+	if (player->health > 0)
 	{
 		cout << "Congradulations for defeating Gol and Gob! 1x shield added to inventory." << endl;
 		if (player->inven["shield"] == NULL)
@@ -74,7 +74,7 @@ void assassin(character* player, bool* gameover)
 	assassin->defense = 0;
 	assassin->name = "%^*(*&^";
 	Fight(player, assassin, gameover);
-	if (gameover)
+	if (player->health > 0)
 	{
 		cout << "The assassin, now sufficiantly injured, dissapears into the thicket! 1x sword added to inventory." << endl;
 		if (player->inven["sword"] == NULL)

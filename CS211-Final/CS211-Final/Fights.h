@@ -28,7 +28,7 @@ void Fight(character *player, Enemy *enemy, bool* gameover)
 	if (player->health <= 0)
 	{
 		cout << "Game Over! to try again, reset program." << endl;
-		*gameover = true;
+		*gameover = false;
 	}
 
 }
