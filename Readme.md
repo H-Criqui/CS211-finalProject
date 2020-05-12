@@ -2,6 +2,17 @@
 ## Text based adventure
 
 This is my Text based adventure game
+
+Available commands
+During a battle you will be prompted for what you would like to do, currently you can:
+-attack           (deals damage to enemy)
+-run              (25% chance to escape from enemy, losing you the combat reward but instanly ending the battle)
+-inventory        (Shows you your inventory of usable Items, does not use up turn action)
+-use [item]       (uses [item], does use turn action)
+
+After combat you will be promted to pick a path, this leads to your next battle
+-simply type 1 , 2 , or 3 to chose which path you would like to go down
+
 Current Features:
 
 3 encounters each with a separate enemy to fight

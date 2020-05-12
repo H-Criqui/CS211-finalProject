@@ -1,0 +1,24 @@
+I enjoyed working on this project. It allowed me to really understand how far I have come as a programmer. The Idea that
+I would be here able to code something, admidantly relatively simple, would have never crossed my mind 2 years ago. I'm 
+really happy with the free form of this project as It allowed me to be excited and determined to make something I could
+be proud of. 
+
+This project really allowed me to get a handle on maps and running them in and with functions. I feel way more comfortable
+with them than I did during the midterm. I believe the map problem was the only problem I missed on the midterm. They are 
+so useful, especially when combined with function pointers(the other main component of my project). I struggled with the 
+sytax neccesary to use them, and I wonder if I will ever get sytax down when it comes to coding. Luckily for me, I have 
+this great resource called the internet to remind me whenever I forget. I think I will one day be able to code a pointer
+from memory, it will just be awhile until then. 
+
+I chose C++ as the coding language, because it was the language I was most comfortable with. I am glad I did this for a few
+reasons. 1) I did not struggle with looking up every function I needed to do what I wanted. 2) It allowed me to really start
+building further upon my skills in C++, I would like to be very proficient in this language, rather than struggling with
+multiple languages. Until I am confident in my C++ skills I want to focus primarily on them while occasionally dipping into 
+other languages, mastering 1 at a time rather than focusing on building proficiency in many all at once. 
+
+As my concluding remarks, I just want to say thank you for another good semester(despite the whole quarantine), and I can't
+wait to have you again next semester. 
+
+Bye for now!
+
+Harve Criqui
